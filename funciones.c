@@ -1,4 +1,3 @@
-
 #include "funciones.h"
 
 // Variables globales
@@ -74,13 +73,13 @@ void registrarLibro() {
         return;
     }
 
-    printf("Ingrese título: ");
+    printf("Ingrese titulo: ");
     leerCadena(biblioteca[totalLibros].titulo, 100);
 
     printf("Ingrese autor: ");
     leerCadena(biblioteca[totalLibros].autor, 50);
 
-    printf("Ingrese año de publicación: ");
+    printf("Ingrese año de publicacion: ");
 
     biblioteca[totalLibros].anio = ValidarIntconRango(1000, 2026);
 
@@ -102,9 +101,7 @@ void mostrarLibros() {
         return;
     }
 
-    printf("\n------------------------------------------------------------------\n");
     printf("ID\tTitulo\t\tAutor\t\tAño\tEstado\n");
-    printf("------------------------------------------------------------------\n");
 
     for(i = 0; i < totalLibros; i++) {
 
@@ -262,7 +259,7 @@ void menu() {
 
     do {
 
-        printf("\n========== BIBLIOTECA ==========\n");
+        printf("\n BIBLIOTECA \n");
         printf("1. Registrar libro\n");
         printf("2. Mostrar libros\n");
         printf("3. Buscar libro por ID\n");
@@ -270,7 +267,7 @@ void menu() {
         printf("5. Actualizar estado\n");
         printf("6. Eliminar libro\n");
         printf("7. Salir\n");
-        printf("Seleccione una opción: ");
+        printf("Seleccione una opcion: ");
 
         opc = ValidarIntconRango(1, 7);
 
@@ -301,7 +298,7 @@ void menu() {
                 break;
 
             case 7:
-                printf("\nSaliendo del programa...\n");
+                printf("\nSaliendo del programa\n");
                 break;
         }
 
@@ -312,3 +309,4 @@ void menu() {
 
     printf("\nPrograma finalizado.\n");
 }
+
